@@ -1,5 +1,6 @@
 import Movie from "../components/movie";
 import { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Home.module.css";
 
 function Home(){

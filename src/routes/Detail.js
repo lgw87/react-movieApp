@@ -23,7 +23,6 @@ function Detail(){
                 <h1>Loading...</h1>
             ) : ( 
                 <div>
-                    <img src={movies.large_cover_image} alt={movies.title}/>
                     <h1>{movies.title}</h1>
                 </div>
             ) 
