@@ -11,7 +11,6 @@ function Detail(){
         ).json(); 
         setLoading(false);
         setMovies(json.data.movie);
-        console.log(json.data.movie);
     };
     useEffect(() => {
         getMovie();
