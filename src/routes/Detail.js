@@ -9,12 +9,13 @@ function Detail(){
         const json = await (
             await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
         ).json(); 
-        setLoading(false);
         setMovies(json.data.movie);
+        setLoading(false);
     };
     useEffect(() => {
         getMovie();
-    } , []);
+        // eslint-disable-next-line 
+    } , [movies]);
 
     return (
         <div>
@@ -22,7 +23,7 @@ function Detail(){
                 <h1>Loading...</h1>
             ) : ( 
                 <div>
-                    <img src={movies.large_cover_image}/>
+                    <img src={movies.large_cover_image} alt={movies.title}/>
                     <h1>{movies.title}</h1>
                 </div>
             ) 
